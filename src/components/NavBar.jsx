@@ -51,7 +51,7 @@ export default function NavBar() {
           </li>
           <li className="navbar-item navbar-item-button">
             <button className="navbar-exit-btn" onClick={handleExit}>
-              Exit
+              Logout
             </button>
           </li>
         </ul>

@@ -169,10 +169,12 @@ export default function InvoiceTemplate({ invoiceData }) {
                 <span className="summary-label">Subtotal</span>
                 <span className="summary-value">{formatCurrency(subtotal)}</span>
               </div>
-              <div className="summary-row">
-                <span className="summary-label">Discount</span>
-                <span className="summary-value">- {formatCurrency(discount)}</span>
-              </div>
+              {discount > 0 && (
+                <div className="summary-row">
+                  <span className="summary-label">Discount</span>
+                  <span className="summary-value">- {formatCurrency(discount)}</span>
+                </div>
+              )}
               <div className="summary-row total-row">
                 <span className="summary-label">Total</span>
                 <span className="summary-value">{formatCurrency(total)}</span>
