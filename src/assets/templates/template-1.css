@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f5f5;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jockey One', sans-serif;
+}
+
+/* Invoice Container */
+.invoice {
+    width: 794px;
+    max-width: 100%;
+    margin: 20px auto;
+    background: #ffffff;
+    position: relative;
+    min-height: 1123px;
+    /* A4 height in pixels at 96 DPI */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative Elements */
+.top-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.top-header img {
+    width: 70%;
+    display: block;
+}
+
+.main-header {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.main-header img {
+    display: block;
+}
+
+/* Main Content */
+.invoice-content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 60px 60px 60px;
+}
+
+/* Company Header */
+.company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.logo-section {
+    flex-shrink: 0;
+}
+
+.company-logo {
+    height: 45px;
+    width: auto;
+}
+
+.company-info {
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.company-name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+/* Invoice Title Section */
+.invoice-title-section {
+    margin-bottom: 30px;
+}
+
+.invoice-title {
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0px;
+    letter-spacing: -0.5px;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.payment-date {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.payment-date span {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+/* Invoice Details Grid */
+.invoice-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 25px;
+    margin-bottom: 50px;
+}
+
+.detail-item {
+    min-height: 50px;
+}
+
+.detail-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0px;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.detail-value {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    min-height: 21px;
+    /* Prevents collapse when empty */
+}
+
+.detail-value:empty::after {
+    content: '\00a0';
+    /* Non-breaking space to maintain height */
+}
+
+/* Description Table */
+.description-section {
+    margin-bottom: 30px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.table-header .col-description,
+.table-header .col-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.col-description {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.col-price {
+    flex-shrink: 0;
+    width: 150px;
+    text-align: right;
+}
+
+.table-body {
+    min-height: 60px;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.item-description {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.item-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: right;
+}
+
+/* Summary and Notes Container */
+.summary-notes-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+/* Notes Section */
+.notes-section {
+    flex: 1;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.notes-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 3px;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.notes-text {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Payment Summary */
+.payment-summary {
+    flex-shrink: 0;
+    width: 350px;
+    margin-bottom: 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.summary-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: right;
+}
+
+.total-row {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+    padding: 15px 0;
+    /* margin-top: 8px; */
+}
+
+.total-row .summary-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.total-row .summary-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+/* Additional Notes */
+.additional-notes {
+    margin-bottom: 40px;
+}
+
+.additional-notes p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Signature Section */
+.signature-section {
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.signature-box {
+    display: inline-block;
+}
+
+.signature-img {
+    /* height: 50px; */
+    width: 150px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.signature-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+}
+
+.signature-title {
+    font-size: 13px;
+    color: #666;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .invoice {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        min-height: auto;
+    }
+
+    .invoice-content {
+        padding: 60px 50px;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 850px) {
+    .invoice {
+        width: 100%;
+        margin: 0;
+    }
+
+    .invoice-content {
+        padding: 60px 40px;
+    }
+
+    .invoice-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 30px;
+    }
+
+    .payment-summary {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .invoice-content {
+        padding: 50px 30px;
+    }
+
+    .company-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .company-info {
+        text-align: left;
+    }
+
+    .invoice-details-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .table-header .col-description,
+    .table-header .col-price {
+        font-size: 13px;
+    }
+
+    .col-price {
+        width: 120px;
+    }
+}

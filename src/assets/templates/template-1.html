@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Template 1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jockey+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./template-1.css">
+</head>
+
+<body>
+
+    <div class="invoice">
+        <!-- Decorative top header -->
+        <div class="top-header">
+            <img src="./images/top-header.svg" alt="header">
+        </div>
+
+        <!-- Decorative sidebar -->
+        <div class="main-header">
+            <img src="./images/sidebar.svg" alt="sidebar">
+        </div>
+
+        <!-- Main Content -->
+        <div class="invoice-content">
+
+            <!-- Company Header -->
+            <div class="company-header">
+                <div class="logo-section">
+                    <img src="./images/logo.svg" alt="Giopio Logo" class="company-logo">
+                </div>
+                <div class="company-info">
+                    <p class="company-name">AR Happy House</p>
+                    <p>Jan E. Shaba Housing,</p>
+                    <p>Jamil Nagar, Bogura</p>
+                    <p>Phone: +88 01728 247398</p>
+                </div>
+            </div>
+
+            <!-- Invoice Title -->
+            <div class="invoice-title-section">
+                <h1 class="invoice-title">Invoice</h1>
+                <h2 class="payment-date">Payment Date: <span data-field="paymentDate">15/11/2025</span></h2>
+            </div>
+
+            <!-- Invoice Details Grid -->
+            <div class="invoice-details-grid">
+                <div class="detail-item">
+                    <p class="detail-label">Invoice for</p>
+                    <p class="detail-value" data-field="invoiceForName">Md Ariful Islam</p>
+                    <p class="detail-value" data-field="invoiceForCompany">Hook & Hunt</p>
+                </div>
+
+                <div class="detail-item">
+                    <p class="detail-label">Paid to</p>
+                    <p class="detail-value">Giopio</p>
+                </div>
+
+                <div class="detail-item">
+                    <p class="detail-label">Invoice #</p>
+                    <p class="detail-value" data-field="invoiceNumber">GP247464</p>
+                </div>
+
+                <div class="detail-item">
+                    <p class="detail-label">Transfer Method</p>
+                    <p class="detail-value" data-field="transferMethod">bKash</p>
+                </div>
+
+                <div class="detail-item">
+                    <p class="detail-label">Transition ID</p>
+                    <p class="detail-value" data-field="transactionId"></p>
+                </div>
+            </div>
+
+            <!-- Description Table -->
+            <div class="description-section">
+                <div class="table-header">
+                    <div class="col-description">Description</div>
+                    <div class="col-price">Total price</div>
+                </div>
+
+                <div class="table-body" data-field="lineItems">
+                    <!-- Line items will be dynamically inserted here -->
+                    <div class="table-row">
+                        <div class="col-description">
+                            <p class="item-description">Hook & Hunt Custom Software Development Project</p>
+                        </div>
+                        <div class="col-price">
+                            <p class="item-price" data-currency>৳ 450,000</p>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="col-description">
+                            <p class="item-description">Hook & Hunt Custom Software Development Project</p>
+                        </div>
+                        <div class="col-price">
+                            <p class="item-price" data-currency>৳ 450,000</p>
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="col-description">
+                            <p class="item-description">Hook & Hunt Custom Software Development Project</p>
+                        </div>
+                        <div class="col-price">
+                            <p class="item-price" data-currency>৳ 450,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary and Notes Container -->
+            <div class="summary-notes-container">
+                <!-- Notes Section (Left) -->
+                <div class="notes-section">
+                    <p class="notes-label">Notes:</p>
+                    <p class="notes-text" data-field="notes">All payments are non refundable</p>
+                </div>
+
+                <!-- Payment Summary (Right) -->
+                <div class="payment-summary">
+                    <div class="summary-row">
+                        <span class="summary-label">Subtotal</span>
+                        <span class="summary-value" data-field="subtotal" data-currency>৳ 450,000</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Discount</span>
+                        <span class="summary-value" data-field="discount" data-currency>- ৳ 25,000</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span class="summary-label">Total</span>
+                        <span class="summary-value" data-field="total" data-currency>৳ 425,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Notes -->
+            <div class="additional-notes">
+                <p><em data-field="amountInWords">In Words: Four Lakh Twenty-Five Thousand Taka Only.</em></p>
+            </div>
+
+            <!-- Signature Section -->
+            <div class="signature-section">
+                <div class="signature-box">
+                    <img src="./images/e-signature.svg" alt="Signature" class="signature-img">
+                    <p class="signature-name">(Jakarea Parvez)</p>
+                    <p class="signature-title">CEO, Giopio</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
